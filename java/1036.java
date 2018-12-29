@@ -1,0 +1,33 @@
+import java.io.IOException;
+ import java.util.Scanner;
+/**
+ * IMPORTANT:
+ *      O nome da classe deve ser "Main" para que a sua solução execute
+ *      Class name must be "Main" for your solution to execute
+ *      El nombre de la clase debe ser "Main" para que su solución ejecutar
+ */
+public class Main {
+
+    public static void main(String[] args) throws IOException {
+
+        /**
+         * Escreva a sua solução aqui
+         * Code your solution here
+         * Escriba su solución aquí
+         */
+         Scanner tec = new Scanner(System.in);
+        double a = tec.nextDouble();
+        double b = tec.nextDouble();
+        double c = tec.nextDouble();
+        double r1 = (-b + Math.sqrt((b * b) - (4 * a * c))) / (2 * a);
+        double r2 = (-b - Math.sqrt((b * b) - (4 * a * c))) / (2 * a);
+        if ((a == 0) || (((b * b) - (4 * a * c)) < 0)) {
+            System.out.println("Impossivel calcular");
+        } else {
+            System.out.printf("R1 = %.5f\n",r1);
+            System.out.printf("R2 = %.5f\n",r2);
+        }
+
+    }
+
+}
